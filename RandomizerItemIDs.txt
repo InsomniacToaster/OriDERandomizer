@@ -4,7 +4,7 @@
 
 6 - Attack Upgrade
 8 - Explosion Power Upgrade (deprecated)
-9 - Spirit Light Efficiency
+9 - Double Experience
 10 - Extra Air Dash
 11 - Charge Dash Efficiency
 12 - Extra Double Jump
@@ -211,7 +211,7 @@
 1533 - Time spent (misc)
 
 1535 - Most deaths at one save
-1536 - Longest time between deaths 
+1536 - Longest time between deaths
 1537 - Most time lost to death
 1538 - Most pickups lost to death
 

@@ -84,9 +84,9 @@ public static class RandomizerBonus
                 Characters.Sein.Inventory.IncRandomizerItem(ID, -1);
             }
             if (Characters.Sein.Inventory.GetRandomizerItem(ID) == 1)
-                RandomizerSwitch.PickupMessage("Spirit Light Efficiency");
+                RandomizerSwitch.PickupMessage("Double Experience");
             else
-                RandomizerSwitch.PickupMessage("Spirit Light Efficiency (" + Characters.Sein.Inventory.GetRandomizerItem(ID).ToString() + ")");
+                RandomizerSwitch.PickupMessage("Double Experience (" + Characters.Sein.Inventory.GetRandomizerItem(ID).ToString() + ")");
             break;
         case 10:
             RandomizerSwitch.PickupMessage("Extra Air Dash");
@@ -175,7 +175,7 @@ public static class RandomizerBonus
                 RandomizerSwitch.PickupMessage("*Water Vein Shard (" + RandomizerBonus.WaterVeinShards().ToString() + "/3)*", 300);
             }
             Keys.GinsoTree = (RandomizerBonus.WaterVeinShards() >= 3);
-            if(Keys.GinsoTree) 
+            if(Keys.GinsoTree)
                 RandomizerStatsManager.FoundEvent(0);
             return;
         case 19:
@@ -197,7 +197,7 @@ public static class RandomizerBonus
                 RandomizerSwitch.PickupMessage("#Gumon Seal Shard (" + RandomizerBonus.GumonSealShards().ToString() + "/3)#", 300);
             }
             Keys.ForlornRuins = (RandomizerBonus.GumonSealShards() >= 3);
-            if(Keys.ForlornRuins) 
+            if(Keys.ForlornRuins)
                 RandomizerStatsManager.FoundEvent(2);
             return;
         case 21:
@@ -219,7 +219,7 @@ public static class RandomizerBonus
                 RandomizerSwitch.PickupMessage("@Sunstone Shard (" + RandomizerBonus.SunstoneShards().ToString() + "/3)@", 300);
             }
             Keys.MountHoru = (RandomizerBonus.SunstoneShards() >= 3);
-            if(Keys.MountHoru) 
+            if(Keys.MountHoru)
                 RandomizerStatsManager.FoundEvent(4);
             return;
         case 28:
@@ -278,7 +278,7 @@ public static class RandomizerBonus
             {
                 int v = Characters.Sein.Inventory.IncRandomizerItem(ID, 1);
                 RandomizerSwitch.PickupMessage("Skill Velocity Upgrade x" + v.ToString());
-                if(Characters.Sein.Inventory.GetRandomizerItem(108) == 0) 
+                if(Characters.Sein.Inventory.GetRandomizerItem(108) == 0)
                     RandomizerBonusSkill.FoundBonusSkill(108);
                 return;
             }
@@ -306,7 +306,7 @@ public static class RandomizerBonus
             {
                 int v = Characters.Sein.Inventory.IncRandomizerItem(ID, 1);
                 RandomizerSwitch.PickupMessage("Jump Upgrade x" + v.ToString());
-                if(Characters.Sein.Inventory.GetRandomizerItem(108) == 0) 
+                if(Characters.Sein.Inventory.GetRandomizerItem(108) == 0)
                     RandomizerBonusSkill.FoundBonusSkill(108);
                 return;
             }
@@ -495,7 +495,7 @@ public static class RandomizerBonus
     public static int ExpWithBonuses(int baseExp, bool doTrack)
     {
         float mult = 1.0f + Characters.Sein.Inventory.GetRandomizerItem(9);
-        if(Characters.Sein.PlayerAbilities.AbilityMarkers.HasAbility) 
+        if(Characters.Sein.PlayerAbilities.AbilityMarkers.HasAbility)
             mult += .5f;
         if(Characters.Sein.PlayerAbilities.SoulEfficiency.HasAbility)
             mult += .5f;
@@ -587,7 +587,7 @@ public static class RandomizerBonus
         try {
             if(RandomizerBonusSkill.IsActive(108))
                 return 0;
-            return Characters.Sein.Inventory.GetRandomizerItem(33);            
+            return Characters.Sein.Inventory.GetRandomizerItem(33);
         }
         catch(Exception) {
             return 0;
@@ -598,7 +598,7 @@ public static class RandomizerBonus
         try {
             if(RandomizerBonusSkill.IsActive(108))
                 return 0;
-            return Characters.Sein.Inventory.GetRandomizerItem(37);            
+            return Characters.Sein.Inventory.GetRandomizerItem(37);
         }
         catch(Exception) {
             return 0;
@@ -657,7 +657,7 @@ public static class RandomizerBonus
         {36, "Underwater Skill Usage"},
         {10, "Extra Air Dash"},
         {11, "Charge Dash Efficiency"},
-        {9, "Spirit Light Efficiency"},
+        {9, "Double Experience"},
     };
 
     public static int WarmthFrags()
